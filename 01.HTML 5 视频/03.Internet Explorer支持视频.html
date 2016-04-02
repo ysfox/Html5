@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+上面的例子使用一个 Ogg 文件，适用于Firefox、Opera 以及 Chrome 浏览器。
+要确保适用于 Safari 浏览器，视频文件必须是 MPEG4 类型。
+video 元素允许多个 source 元素。source 元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式：
+-->
+<video width="320" height="240" controls="controls">
+    <source src="/i/movie.ogg" type="video/ogg">
+    <source src="/i/movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</body>
+</html>
