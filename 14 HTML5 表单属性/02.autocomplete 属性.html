@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+autocomplete 属性
+autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。
+注释：autocomplete 适用于 <form> 标签，以及以下类型的 <input> 标签：text, search, url, telephone, email, password, datepickers, range 以及 color。
+当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：
+注释：在某些浏览器中，您可能需要启用自动完成功能，以使该属性生效。
+-->
+
+
+<form action="/example/html5/demo_form.asp" method="get" autocomplete="on">
+    First name:<input type="text" name="fname" /><br />
+    Last name: <input type="text" name="lname" /><br />
+    E-mail: <input type="email" name="email" autocomplete="off" /><br />
+    <input type="submit" />
+</form>
+
+<p>请填写并提交此表单，然后重载页面，来查看自动完成功能是如何工作的。</p>
+<p>请注意，表单的自动完成功能是打开的，而 e-mail 域是关闭的。</p>
+</body>
+</html>

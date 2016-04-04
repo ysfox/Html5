@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<!--
+
+-->
+<p id="demo">点击这个按钮，获得您的坐标：</p>
+<button onclick="getLocation()">试一下</button>
+<script>
+    var x=document.getElementById("demo");
+    function getLocation()
+    {
+        if (navigator.geolocation)
+        {
+            //Geolocation 对象 - 其他有趣的方法
+            //watchPosition() - 返回用户的当前位置，并继续返回用户移动时的更新位置（就像汽车上的 GPS）。
+            //clearWatch() - 停止 watchPosition() 方法
+            //下面的例子展示 watchPosition() 方法。您需要一台精确的 GPS 设备来测试该例（比如 iPhone）：
+            navigator.geolocation.watchPosition(showPosition);
+        }
+        else{x.innerHTML="Geolocation is not supported by this browser.";}
+    }
+    function showPosition(position)
+    {
+        x.innerHTML="Latitude: " + position.coords.latitude +
+                "<br />Longitude: " + position.coords.longitude;
+    }
+</script>
+
+</body>
+</html>
